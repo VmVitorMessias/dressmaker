@@ -1,0 +1,142 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+:root {
+    --first-color: hsl(137, 32%, 40%);
+    --second-color: hsl(134, 100%, 19%);
+    --body-color: hsl(219, 43%, 63%);
+
+    --body-font: "Poppins", sans-serif;
+
+    --font-medium: 500;
+    --font-semi-bold: 600;
+    --font-bold: 700;
+
+    --z-fixed: 100;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+ul {
+    list-style: none;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    font-family: var(--body-font);
+    background-color: var(--body-color);
+    width: 100%;
+    min-height: 100vh;
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+
+.nuvem {
+    position: absolute;
+    width: 1700px;
+}
+
+.n1 {
+    z-index: -2;
+    top: -20rem;
+    left: -30rem;
+}
+
+.n2 {
+    z-index: -2;
+    right: -70rem;
+    bottom: -20rem;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    column-gap: 2rem;
+    margin-top: 2rem;
+}
+
+nav ul a {
+    position: relative;
+    font-size: 1.3rem;
+    color: var(--second-color);
+    font-weight: var(--font-medium);
+}
+
+nav ul a::after {
+    content: "";
+    width: 0%;
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    height: 2px;
+    background-color: var(--first-color);
+    transition: 0.3s ease;
+}
+
+nav ul a:hover::after {
+    width: 100%;
+}
+
+nav ul a:hover {
+    opacity: 0.6;
+}
+
+.letter {
+    position: absolute;
+    margin-left: 20%;
+    margin-top: 16rem;
+}
+
+.letters h1,
+.letters h2 {
+    text-transform: uppercase;
+    color: var(--second-color);
+}
+
+.letters h2 {
+    font-size: 3rem;
+    font-weight: var(--font-semi-bold);
+}
+
+.letters h1 {
+    font-weight: var(--font-bold);
+    font-size: 5rem;
+    width: 200px;
+    line-height: 80px;
+}
+
+footer {
+    position: absolute;
+    display: flex;
+    width: 100%;
+    bottom: 0px;
+}
+
+footer img {
+    position: absolute;
+    width: 1100px;
+    bottom: -0px;
+    right: 0px;
+    z-index: var(--z-fixed);
+
+}
+
+.line {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 200px;
+    background-color: var(--first-color);
+
+}
